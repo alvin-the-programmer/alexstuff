@@ -14,14 +14,41 @@ class Node:
 # b = Node('b')
 # c = Node('c')
 # d = Node('d')
-#
+
 # a.next = b
 # b.next = c
 # c.next = d
 # head = a
 # 
-# list_find(head, 'c') # True
-# list_find(head, 'Z') # False
+# iterative
+# n is the number of nodes in the LL
+# time: O(n)
+# space: O(1)
+# def list_find(head, target):
+#   curr = head
+#   while curr != None:
+#     if curr.val == target:
+#       return True
+#     curr = curr.next
+#   return False
+
+# recursive
+# n is the number of nodes in the LL
+# time: O(n)
+# space: O(n) // there are n calls on the stack in the WORST case scenario
+# def list_find(head, target):
+#   # base case
+#   if head == None:
+#     return False
+#   # stop recursion 
+#   if head.val == target:
+#     return True
+#   # recursive step 
+#   # i keep forgetting to RETURN the recursive call
+#   return list_find(head.next, target)
+
+# print(list_find(head, 'c')) # True
+# print(list_find(head, 'Z')) # False
 
 
 # [2.] Write a fn list_count(head, target) that takes in the head of a LL.
@@ -29,24 +56,51 @@ class Node:
 #
 # Solve iteratively and recursively.
 # 
-# a = Node(1)
-# b = Node(3)
-# c = Node(7)
-# d = Node(3)
-# e = Node(1)
-# f = Node(1)
-#
-# a.next = b
-# b.next = c
-# c.next = d
-# d.next = e
-# e.next = f
-# head = a
-#
-# list_count(head, 1) # 3
-# list_count(head, 3) # 2
-# list_count(head, 7) # 1
-# list_count(head, 42) # 0
+a = Node(1)
+b = Node(3)
+c = Node(7)
+d = Node(3)
+e = Node(1)
+f = Node(1)
+
+a.next = b
+b.next = c
+c.next = d
+d.next = e
+e.next = f
+head = a
+
+#  iterative
+# time: O(n) 
+# space: O()
+# def list_count(head, target):
+#   count = 0
+#   curr = head
+#   while curr != None:
+#     if curr.val == target:
+#       count += 1
+#     curr = curr.next
+#   return count
+
+# recursive
+# time: O(n)
+# space: O(2n) -> O(n)
+def list_count(head, target):
+  if head == None:
+    return 0
+  return check(head, target) + list_count(head.next, target)
+
+# is this right? not even sure if this method is necessary or not but i cant think of another way to check if its equivalent or not
+def check(head, target):
+  if head.val == target:
+    return 1
+  else:
+    return 0
+
+print(list_count(head, 1)) # 3
+print(list_count(head, 3)) # 2
+print(list_count(head, 7)) # 1
+print(list_count(head, 42)) # 0
 
 
 
