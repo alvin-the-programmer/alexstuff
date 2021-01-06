@@ -88,7 +88,10 @@ head = a
 def list_count(head, target):
   if head == None:
     return 0
-  return check(head, target) + list_count(head.next, target)
+  is_match = 0
+  if head.val == target:
+    is_match += 1
+  return is_match + list_count(head.next, target)
 
 # is this right? not even sure if this method is necessary or not but i cant think of another way to check if its equivalent or not
 def check(head, target):
