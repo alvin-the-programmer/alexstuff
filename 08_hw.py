@@ -4,6 +4,7 @@
 #         self.val = val
 #         self.next = next
 
+# 143. reorder list: my solution
 class Solution:
     def reorderList(self, head: ListNode) -> None:
         if head != None:
@@ -33,3 +34,43 @@ class Solution:
             nodes.append(head)
             head = head.next
         return nodes
+
+# 856. score of parentheses
+# Given a balanced parentheses string S, compute the score of the string based on the following rule:
+
+# () has score 1
+# AB has score A + B, where A and B are balanced parentheses strings.
+# (A) has score 2 * A, where A is a balanced parentheses string.
+
+# Example:
+# Input: "( () ( () ) )"
+# Output: 6
+class Solution:
+    def scoreOfParentheses(self, S: str) -> int:
+        stack = []
+        for curr in S:
+            if curr == '(':
+                stack.append(curr)
+            
+            if stack[-1] == '(' and curr == ')':
+                stack.pop()
+                stack.append(1)
+            elif type(stack[-1]) == int and curr == ')':
+                temp = stack[-1]
+                stack.pop()
+                stack.pop()
+                stack.append(temp * 2)
+                
+            while len(stack) > 1 and type(stack[-1]) == int:
+                temp = stack[-1]
+                stack.pop()
+                if type(stack[-1]) == int:
+                    temp += stack[-1]
+                    stack.pop()
+                    stack.append(temp)
+                else:
+                    stack.append(temp)
+                    break
+        
+        return stack[0]
+            
