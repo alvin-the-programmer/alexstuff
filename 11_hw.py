@@ -44,12 +44,27 @@ root = a
 #    /
 #   1
 #
-# has_path_sum(root, 9) # true
-# has_path_sum(root, 5) # true
-# has_path_sum(root, 13) # true
-# has_path_sum(root, 10) # false
-# has_path_sum(root, 9) # false
 
+# DFS
+def has_path_sum(root, target_sum):
+  return has_path_sum_helper(root, target_sum, 0)
+
+def has_path_sum_helper(root, target_sum, curr_sum):
+  if root is None:
+    return False
+  
+  curr_sum = curr_sum + root.val
+  if curr_sum == target_sum:
+    return True
+    
+  return has_path_sum_helper(root.right, target_sum, curr_sum) or has_path_sum_helper(root.left, target_sum, curr_sum)
+
+
+# print(has_path_sum(root, 9)) # true
+# print(has_path_sum(root, 5)) # true
+# print(has_path_sum(root, 13)) # true
+# print(has_path_sum(root, 2) )# false
+# print(has_path_sum(root, 1) )# true
 
 # [2] Write a fn any_path_sum that takes in the root of a bintree and a targetSum as arguments.
 # The fn should return a list representing the  path whose sum of values is the targetSum. 
@@ -70,6 +85,8 @@ root = a
 # any_path_sum(root, 13) # [3, 7, 3]
 # any_path_sum(root, 10) # []
 # any_path_sum(root, 9) # []
+
+def 
 
 # [3] LeetCode#112 (https://leetcode.com/problems/path-sum/)
 
