@@ -43,12 +43,6 @@ root = a
 # 10  3     4
 #    /
 #   1
-#
-# has_path_sum(root, 9) # true
-# has_path_sum(root, 5) # true
-# has_path_sum(root, 13) # true
-# has_path_sum(root, 10) # false
-# has_path_sum(root, 9) # false
 
 
 # [2] Write a fn any_path_sum that takes in the root of a bintree and a targetSum as arguments.
@@ -68,8 +62,11 @@ root = a
 # any_path_sum(root, 9) # [ 3, 2, 4 ]
 # any_path_sum(root, 5) # [3, 2]
 # any_path_sum(root, 13) # [3, 7, 3]
-# any_path_sum(root, 10) # []
-# any_path_sum(root, 9) # []
+# any_path_sum(root, 10) # [3, 7]
+# any_path_sum(root, 40) # []
+# any_path_sum(root, 2) # []
+
+
 
 # [3] LeetCode#112 (https://leetcode.com/problems/path-sum/)
 
