@@ -37,8 +37,7 @@ class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
         if root is None:
             return None
-        if root.left is None and root.right is None:
-            return root
+
         self.invertTree(root.left)
         self.invertTree(root.right)
         temp = root.left
