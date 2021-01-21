@@ -232,4 +232,4 @@ def word_path(root, word):
 print(word_path(root, 'cats')) # true
 print(word_path(root, 'car')) # true
 print(word_path(root, 'cat')) # true
-print(word_path(root, 'crying')) # false
+print(word_path(root, 'crying')) # falsegit
