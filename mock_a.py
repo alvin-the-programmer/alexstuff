@@ -27,14 +27,14 @@ def has_linked_list_prefix(head, target_string):
     else:
         return False
     
-r = None
-o = Node('o')
-a = Node('a')
-d = Node('d')
+# r = None
+# o = Node('o')
+# a = Node('a')
+# d = Node('d')
 
-# r.next = o
-o.next = a
-a.next = d
+# # r.next = o
+# o.next = a
+# a.next = d
 
 # print(has_linked_list_prefix(r,''))
 
@@ -101,17 +101,15 @@ def prefix_path_count(root, target_string):
     # solely here for the case that we are initially given an empty string?
     if target_string == "":
         return 1
-    if root is None:
+
+    if root.val != target_string[0] or root is None:
         return 0
+
+    if target_string[1:] == "": # 
+        return 1
     
-    if root.val == target_string[0]:
-        # preemptively check if we have already finished our word
-        if target_string[1:] == "":
-            return 1
-        else:
-            return prefix_path_count(root.left, target_string[1:]) + prefix_path_count(root.right, target_string[1:])
-    else:
-        return 0
+    # preemptively check if we have already finished our word
+    return prefix_path_count(root.left, target_string[1:]) + prefix_path_count(root.right, target_string[1:])
 
 print(prefix_path_count(p, 'ply')) # 2
 print(prefix_path_count(p, 'pln')) # 1
