@@ -139,3 +139,4 @@
 # O(c^n) - exponential
   # O(2^n) 
   # O(2^n) 
+# O(n!) - factorial
