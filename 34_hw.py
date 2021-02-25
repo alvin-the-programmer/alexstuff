@@ -53,7 +53,7 @@ class Solution:
         for i in range(1, n + 1): # i = 3
             nodes_in_left = i - 1 # 2
             nodes_in_right = n - i # 7
-            count = nodes_in_left * nodes_in_right
+            # count = nodes_in_left * nodes_in_right
             count = self.numTreesHelper(nodes_in_left, memo) * self.numTreesHelper(nodes_in_right, memo)
             total += count
         

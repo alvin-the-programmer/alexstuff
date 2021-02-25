@@ -7,6 +7,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
         if not preorder and not inorder:
@@ -23,4 +24,3 @@ class Solution:
         root.left = left
         root.right = right
         return root
-        

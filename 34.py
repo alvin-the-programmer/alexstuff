@@ -1,48 +1,31 @@
-Problem:
+# Problem:
 
-input1: [(a, b, equal), (b, a, not-equal)]
-Output2: false
+# input1: [(a, b, equal), (b, a, not-equal)]
+# Output2: false
 
-Input2: [
- (a, b, equal), 
- (b, c, equal),
- (a, c, equal)
-]
-Output2: true
-
-
-
-Input2: [
- (a, b, equal), 
- (b, c, equal),
- (a, c, not-equal)
-]
-Output2: false
+# Input2: [
+#  (a, b, equal), 
+#  (b, c, equal),
+#  (a, c, equal)
+# ]
+# Output2: true
 
 
-__________________________
+
+# Input2: [
+#  (a, b, equal), 
+#  (b, c, equal),
+#  (a, c, not-equal)
+# ]
+# Output2: false
+
+
+# __________________________
 	
 
+# sqrt(n) = # of nodes
+# n = edges
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-sqrt(n) = # of nodes
-n = edges
 def validate_equations(edges):
 	components = {}
 	for edge in edges:
