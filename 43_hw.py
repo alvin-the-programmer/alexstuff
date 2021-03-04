@@ -47,10 +47,18 @@ class Solution:
 # n = total # of #'s
 # r = # of rows in triangle
 # before memo:
-# time: O(r!)?
-# space: O(log n)
+# time: O(2^r)
+# space: O(r)
 
 # after memo:
-# time: O(n)
-# space: O(n)
-# call stack space? log (n)
+# time: O(r^2)
+# space: O(r^2)
+
+# 1
+# .
+# r -2
+# r- 1
+# r
+
+
+# (r) * (r / 2) = (r ^ 2 / 2) = r^2
