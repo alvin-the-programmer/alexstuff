@@ -27,9 +27,36 @@ def mergeSort(arr):
 
 # inp = [10, 4, 5, 6, 7, 10, 20, 100, 101]
 
-import random
+# import random
 # print(random.randint(0, 10)) # random bw 0 -10
 # print(random.randrange(0, 10)) # bw 0 -9
-inp = [ random.randint(0, 100) for i in range(0, 20000) ]
+# inp = [ random.randint(0, 100) for i in range(0, 20000) ]
 
-print(mergeSort(inp))
+# print(mergeSort(inp))
+
+
+inp = [4,5,6,7,10,10,20,100,101]
+
+def bsearch(arr, target, lo, hi):
+
+
+    if not arr:
+        return False
+
+
+    
+    middleIdx = len(arr) // 2
+    middleVal = arr[middleIdx]
+
+    if middleVal == target:
+        return True
+    elif middleVal < target:
+        return bsearch(arr[middleIdx+1:], target)
+    else:
+        return bsearch(arr[:middleIdx], target)
+
+# print(bsearch(inp, 100)) # true
+print(bsearch([2, 3], 3)) # true
+
+# print(bsearch(inp, 40)) # false
+
