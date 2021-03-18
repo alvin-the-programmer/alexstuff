@@ -1,0 +1,120 @@
+SUMMARY
+
+TIME COMPLEXITIES:
+  # FAST/SMALL 
+  # O(1) - constant X
+  # O(log_(n)) - logarithmic
+  # O(n) - linear X
+  # O(n * log(n)) - loglinear / quasilinear / linearithmic
+  # O(n^c) - polynomial
+  #   O(n^2) - quadratic
+  #   O(n^3) - cubic
+  # O(c^n) - exponential
+  #   O(2^n)
+  #   O(3^n)
+  # O(n!) - factorial
+  # SLOW/LARGE
+
+ARRAYS
+  -two pointers (fast and slow)
+  -sliding window
+  -Kadane's algorithm
+    -Finding the max subarray
+
+LINKED LISTS
+  -Singly vs. Doubly
+  -Practice walking through iteratively and recursively
+  -reversing a linked list!
+  PROBLEMS
+  -Reversing!
+  -Add 2 numbers that are linked lists?
+  -merging lists
+
+STACKS
+  PROBLEMS
+  -856 Score of parentheses
+
+QUEUES
+  -go over deques 
+
+TREES/GRIDS
+  LARGE TOPICS 
+    -memoization
+    -utilizing edges
+  -one root node with NO parent
+  -unique path from root to every leaf
+  PROBLEMS
+    -finding paths
+    -paint houses i and ii
+    -house robber i and ii
+    -num islands
+    -calculateMinimumHP
+    -longestCommonSubsequence
+
+BINARY TREES
+  -tree with each node having at most 2 children
+
+HEAP
+  -when trying to sort some parts of an input?
+
+GRAPHS/GRIDS
+  -UNION SET (find largest area or # of components)
+    -find and union methods
+  -DFS (num islands, using visited set to calc # of components)
+  -TOPOLOGICAL SORT finds the best way to sort a lis of items by only choosing nodes where ALL parents have ALREADY been visited
+  -PRIMS (find the minimum spanning tree for a weighted undirected graph/ connect all nodes in a graph with the minimum COST of edges)
+  -DJIKSTRA (find shortest path between a node and all other nodes in the graph/ or just two nodes)
+    -with heap for max efficiency
+  -GRAPH COLORING
+    -find if a graph is bipartite
+      -assign colors to each node and see if its possible to not have two adjacent nodes with same color
+    -WHITE GRAY BLACK (to find cycle in a graph)
+      -unvisited, visiting, visited
+-collection of nodes/vertices & edges
+-make ADJACENCY LISTS:
+  -unweighted: {
+    a: [b, c]
+    b: [c]
+    c: []
+  }
+-weighted: {
+    a: {b: 3, c: 3}
+    b: {c:1}
+    c: {}
+  }
+-use VISITED SETS to keep track of nodes visited
+Problems
+  -Town judge
+  -shortest alternating paths?
+
+TRAVERSALS:
+  -DFS
+    -recursive and iterative
+  -BFS
+    -BFS with layer approach?
+  -Bidirectional BFS
+  -preorder
+  -inorder
+  -postorder
+
+TECHNIQUES
+  -memoization / dynamic programming
+    -trees 
+    -graphs
+  -SUBSETS
+  -PERMUTATIONS!
+  -binary to dec / dec to binary
+
+SORTS
+  -merge sort (n log n)
+
+FIND 
+  -binary search (log n)
+    -only works on sorted array
+
+MAJORITY ELEMENT (find num that occurs more than n/2 times)
+  -boyer moore voting Algo
+
+
+MISC STUFF YOU WANT TO STUDY?
+  -bitwise xor
