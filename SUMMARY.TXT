@@ -107,6 +107,7 @@ TECHNIQUES
 
 SORTS
   -merge sort (n log n)
+  -bubble sort (n^2)
 
 FIND 
   -binary search (log n)
