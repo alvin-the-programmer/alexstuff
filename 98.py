@@ -182,9 +182,6 @@ class Solution:
             count[t % 60] += 1
 
         return total_count
-    
-
-
 
 [30,20,150,100,40]
                ^
