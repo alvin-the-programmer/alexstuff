@@ -85,6 +85,7 @@ class Solution:
 
         min_diff = float('inf')
         curr_max = jobDifficulty[idx] # TODO
+        
         for i in range(idx + 1, len(jobDifficulty) + 1):
             curr_diff = curr_max + self.minDifficultyHelper(jobDifficulty, d - 1, i, memo)
             if curr_diff < min_diff:
