@@ -94,7 +94,7 @@ normalizing tables
             - notebooks <-> notes <-> tags
             - must update duplicated columns
             - can lead to being out of sync
-            - if duplicates, what is the source of truth
+            - if duplicates, what is the source of truth. there is no SOURCE OF TRUTH. EFVERYTHING IS A LIE
         use join table to avoid column duplication
             - person table can reference both applicants and students
         doing complex queries is easy
